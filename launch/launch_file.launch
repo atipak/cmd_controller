@@ -1,0 +1,30 @@
+<launch>
+	<!-- <arg name="argOne" default="sim"/> -->
+	<rosparam command="load" file="$(find my_pkg)/config/c.yaml"/>
+	<node 
+		pkg="turtlesim"
+		type="turtlesim_node"
+		name="zelva"
+		output="screen"
+		required="true">
+	</node>
+	<node 
+		pkg="randwalk"
+		type="randwalk_node"
+		name="Lala_control" >
+		<!-- launch-prefix="xterm -e" > -->
+	<!-- <param name="turtleName" value="Lala"/> -->
+	</node>
+	<node 
+		pkg="randwalk"
+		type="randwalk_node"
+		name="Tinkiwinky_control" >
+	</node>
+	<node 
+		pkg="randwalk"
+		type="randwalk_node"
+		name="Po_control" >
+	</node>
+
+
+</launch>
